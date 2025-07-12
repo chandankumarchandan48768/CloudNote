@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Well come to CloudNoteHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+        }
+        .container {
+            margin-top: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+    <script>
+        function changeFolder() {
+            let selectedFolder = document.getElementById("folder").value;
+            window.location.href = "?folder=" + selectedFolder;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">📂 Uploaded Files</h2>
+        <label for="folder" class="form-label">Select Folder:</label>
+        <select id="folder" name="folder" class="form-select mb-3" onchange="changeFolder()">
+            <option value="" {% if not request.GET.folder %}selected{% endif %}>🔽 Choose a Folder</option>
+            <option value="1rxjPa-eUrMeQgFW8pA3gKS-Hidf-Nt-S" {% if request.GET.folder == "1rxjPa-eUrMeQgFW8pA3gKS-Hidf-Nt-S" %} selected {% endif %}>📂 CSE</option>
+            <option value="19ttrSV0LrD_nPmQvCFwYw8W0d7pEEYNy" {% if request.GET.folder == "19ttrSV0LrD_nPmQvCFwYw8W0d7pEEYNy" %} selected {% endif %}>📂 Data Science</option>
+            <option value="1NjaeVNCfT6cjdpwSPLX3k9AIuC8HgsiZ" {% if request.GET.folder == "1NjaeVNCfT6cjdpwSPLX3k9AIuC8HgsiZ" %} selected {% endif %}>📂 AI and ML</option>
+            <option value="1If6hfKjmzw3naSNJTpEYH2Hs-KSVoqBI" {% if request.GET.folder == "1If6hfKjmzw3naSNJTpEYH2Hs-KSVoqBI" %} selected {% endif %}>📂 CyberSecurity</option>
+            <option value="1EiWuegXMu8mN4zgURbXz5C9GETQl5MPS" {% if request.GET.folder == "1EiWuegXMu8mN4zgURbXz5C9GETQl5MPS" %} selected {% endif %}>📂 ECE</option>
+            <option value="1rs2CFojv0AfBYGlS02SCoSjdNGcVJwFg" {% if request.GET.folder == "1rs2CFojv0AfBYGlS02SCoSjdNGcVJwFg" %} selected {% endif %}>📂 EEE</option>
+            <option value="1Vx5WMLK3B5WzDGb_V6vqpB1gftbMPyvv" {% if request.GET.folder == "1Vx5WMLK3B5WzDGb_V6vqpB1gftbMPyvv" %} selected {% endif %}>📂 Civil</option>
+            <option value="11jnyJApaCTljxtM-m_GCClVVm0DQiv3O" {% if request.GET.folder == "11jnyJApaCTljxtM-m_GCClVVm0DQiv3O" %} selected {% endif %}>📂 Information Science</option>
+            <option value="13oFjBs1rF-zenXDqgjKABUACZcdSEVcQ" {% if request.GET.folder == "13oFjBs1rF-zenXDqgjKABUACZcdSEVcQ" %} selected {% endif %}>📂 Physics</option>
+            <option value="1LMAnRjGpqEn0-dt-XCCa-ytKaDb4ftLE" {% if request.GET.folder == "1LMAnRjGpqEn0-dt-XCCa-ytKaDb4ftLE" %} selected {% endif %}>📂 Mechanical Engineering</option>
+            <option value="1VwrPM4ymGvaWxMUJXBu8Eu34gv91E5pE" {% if request.GET.folder == "1VwrPM4ymGvaWxMUJXBu8Eu34gv91E5pE" %} selected {% endif %}>📂 Mathematics</option>
+            <option value="1Qd8_UTdmp_Nto3e4rHKhh0H4f7kPsgIB" {% if request.GET.folder == "1Qd8_UTdmp_Nto3e4rHKhh0H4f7kPsgIB" %} selected {% endif %}>📂 Medical Electronics</option>
+        </select>
+
+
+        {% if files %}
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>File Name</th>
+                        <th>View File</th>
+                        <th>Year(subject code)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for file in files %}
+                    <tr>
+                        <td>{{ file.name }}</td>
+                        <td><a href="{{ file.webViewLink }}" target="_blank">📂 Open</a></td>
+                        <td>{{ file.description|default:"No Tags/Comments" }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="text-center text-muted">No files found in this folder.</p>
+        {% endif %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

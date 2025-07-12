@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudNoteHub</title>
+    
+    <!-- ✅ Bootstrap CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- ✅ Custom Styles -->
+    <style>
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+        }
+        .container {
+            max-width: 500px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 60px;
+        }
+        h2 {
+            text-align: center;
+            color: #343a40;
+            font-weight: bold;
+        }
+        .form-control, .form-select {
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+        .btn-upload {
+            width: 100%;
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            transition: 0.3s ease-in-out;
+            font-weight: bold;
+            padding: 12px;
+            border-radius: 8px;
+        }
+        .btn-upload:hover {
+            background: linear-gradient(to right, #ff4b2b, #ff416c);
+        }
+        .form-label {
+            font-weight: 600;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>📁 Upload Your File</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="mb-3">
+                <label for="file" class="form-label">Choose File:</label>
+                <input type="file" class="form-control" name="file" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="folder" class="form-label">Select Folder:</label>
+                <select class="form-select" id="folderSelect" name="folder" required>
+                    <option value="">🔽 Choose a Folder</option>
+                    <option value="1rxjPa-eUrMeQgFW8pA3gKS-Hidf-Nt-S">📂 CSC</option>
+                    <option value="19ttrSV0LrD_nPmQvCFwYw8W0d7pEEYNy">📂 Data Science</option>
+                    <option value="1NjaeVNCfT6cjdpwSPLX3k9AIuC8HgsiZ">📂 AI and ML</option>
+                    <option value="1If6hfKjmzw3naSNJTpEYH2Hs-KSVoqBI">📂 CyberSecurity</option>
+                    <option value="1EiWuegXMu8mN4zgURbXz5C9GETQl5MPS">📂 ECE</option>
+                    <option value="1rs2CFojv0AfBYGlS02SCoSjdNGcVJwFg">📂 EEE</option>
+                    <option value="1Vx5WMLK3B5WzDGb_V6vqpB1gftbMPyvv">📂 Civil</option>
+                    <option value="1VwrPM4ymGvaWxMUJXBu8Eu34gv91E5pE">📂 Mathametics</option>
+                    <option value="13oFjBs1rF-zenXDqgjKABUACZcdSEVcQ">📂 Physics</option>
+                    <option value="1Qd8_UTdmp_Nto3e4rHKhh0H4f7kPsgIB">📂 Medical Electronics</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Year & Subject Code:</label>
+                <input type="text" name="description" class="form-control" placeholder="Enter details (optional)">
+            </div>
+
+            <button type="submit" class="btn btn-upload">📤 Upload File</button>
+        </form>
+    </div>
+
+    <!-- ✅ Bootstrap JS for interactive components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

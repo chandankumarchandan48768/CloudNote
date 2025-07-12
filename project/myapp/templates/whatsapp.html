@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp Contact Information</title>
+    
+    <!-- ✅ Bootstrap CSS for responsiveness & styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- ✅ Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- ✅ Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #2b5876, #4e4376);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        .logo img {
+            width: 120px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        h2 {
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .contact-info {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .contact-info p {
+            font-size: 18px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact-info i {
+            color: #f8d210;
+            font-size: 22px;
+        }
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+        .social-icons a:hover {
+            color: #f8d210;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="{% static 'images/ssit-logo.svg' %}" alt="Logo" width="150">
+        </div>
+        <h2>whatsapp support</h2>
+
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Address: Maraluru, Tumkuru-572105</p>
+            <p><i class="fas fa-phone"></i> Contact Number: +91 0816-2200314</p>
+            <p><i class="fas fa-globe"></i> <a href="https://ssit.edu.in/" style="color: white; text-decoration: none;">Website: www.ssit.edu.in</a></p>
+            <p><i class="fas fa-globe"></i> <a href="https://maps.app.goo.gl/MMFXiVR7i7LN4pJX8" style="color: white; text-decoration: none;">Location</a></p>
+        </div>
+
+    </div>
+
+    <!-- ✅ Bootstrap JS for interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

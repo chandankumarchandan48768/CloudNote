@@ -1,0 +1,284 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>Notes Manager</title>
+  </head>
+  <body>
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    
+    <main>
+      <h1 class="visually-hidden">Headers examples</h1>
+
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <span class="fs-4">Sri Siddhartha Institute Of Technology</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item me-2"><a href="{% url 'index' %}" class="nav-link active" aria-current="page">Home</a></li>
+        <a href="{% url 'upload_to_drive' %}" class="btn btn-warning me-2">Upload</a>
+        <li class="nav-item"><a href="{% url 'about' %}" class="nav-link me-2">About</a></li>
+      </ul>
+    </header>
+  </div>
+
+    
+      <div class="container px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Believe in yourself</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <svg xmlns="{% static 'images/icons/book-solid.svg' %}" width="2em" height="2em" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+              </svg>
+            </div>
+            <div>
+              <h2>CSE</h2>
+              <p>Computer Science is the study of algorithms, data structures, and computing systems. It includes programming languages, software development, and artificial intelligence. Cybersecurity and data science are growing fields within CS.</p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <img src="{% static 'images/icons/robot-solid.svg' %}" width="45px" height="45px" viewBox="0 0 16 16">
+            </div>
+            <div>
+              <h2>AI and ML</h2>
+              <p>AI is the simulation of human intelligence in machines to perform tasks like reasoning and decision-making. Machine Learning, a subset of AI, enables computers to learn from data and improve performance over time.</p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <img src="{% static 'images/icons/chart-column-solid.svg' %}" width="45px" height="45px" viewBox="0 0 16 16">
+            </div>
+            <div>
+              <h2>Data science</h2>
+              <p>Data Science is the field of extracting insights from structured and unstructured data. It combines statistics, machine learning, and data visualization to solve complex problems. Key tools include Python, R, SQL, and big data frameworks like Hadoop and Spark. </p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="b-example-divider"></div>
+    
+      <div class="container px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Success comes from persistence</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <img src="{% static 'images/icons/microscope-solid.svg' %}" width="45px" height="45px" viewBox="0 0 16 16">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+              </svg>
+            </div>
+            <div>
+              <h2>ECE</h2>
+              <p>This field focuses on electrical circuits, communication systems, and signal processing. It covers wireless communication, embedded systems, and semiconductor technology. Power systems and renewable energy solutions are crucial topics.</p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <img src="{% static 'images/icons/shield-halved-solid.svg' %}" width="45px" height="45px" viewBox="0 0 16 16">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+              </svg>
+            </div>
+            <div>
+              <h2>Cybersecurity</h2>
+              <p>Cybersecurity protects digital systems from cyber threats and attacks. It includes encryption, network security, and ethical hacking. Secure coding and risk management help prevent data breaches. </p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <img src="{% static 'images/icons/lightbulb-solid.svg' %}" width="45px" height="45px" viewBox="0 0 16 16">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+              </svg>
+            </div>
+            <div>
+              <h2>EEE</h2>
+              <p>Electrical and Electronics Engineering deals with the study and application of electricity, electronics, and electromagnetism. It includes power generation, transmission, and electrical circuit design. Key areas include renewable energy, embedded systems, and automation.</p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="b-example-divider"></div>
+    
+      <div class="container px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Small steps lead to big results</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <img src="{% static 'images/icons/circle-info-solid.svg' %}" width="45px" height="45px" viewBox="0 0 16 16">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+              </svg>
+            </div>
+            <div>
+              <h2>Information Science</h2>
+              <p>Information Science focuses on data management and information systems. It includes database design, big data analytics, and cloud computing. AI and machine learning enhance data-driven decision-making</p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <img src="{% static 'images/icons/ethernet-solid.svg' %}" width="45px" height="45px" viewBox="0 0 16 16">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+              </svg>
+            </div>
+            <div>
+              <h2>ETE</h2>
+              <p>Electronics and Telecommunication Engineering focuses on the design and development of communication systems. It includes signal processing, wireless networks, and optical fiber technology. Engineers work on advancements in 5G, IoT, and satellite communication. </p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <img src="{% static 'images/icons/tent-arrow-left-right-solid.svg' %}" width="45px" height="45px" viewBox="0 0 16 16">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+              </svg>
+            </div>
+            <div>
+              <h2>Civil Engineering</h2>
+              <p>Civil Engineering deals with the design and construction of infrastructure. It includes structural, geotechnical, transportation, and environmental engineering. Engineers work on bridges, roads, buildings, and water supply systems.</p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Your potential is limitless</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <img src="{% static 'images/icons/p-solid.svg' %}" width="45px" height="45px" viewBox="0 0 16 16">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+              </svg>
+            </div>
+            <div>
+              <h2>Physics</h2>
+              <p>Physics is the study of matter, energy, and fundamental forces. It explains natural phenomena through classical and quantum mechanics. Electromagnetism and thermodynamics are key branches of physics.</p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <img src="{% static 'images/icons/vial-solid.svg' %}" width="45px" height="45px" viewBox="0 0 16 16">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+              </svg>
+            </div>
+            <div>
+              <h2>Chemistry</h2>
+              <p>Chemistry is the study of elements, compounds, and chemical reactions. It is divided into organic, inorganic, physical, and analytical chemistry. Chemical processes are essential in medicine, agriculture, and industry. </p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <img src="{% static 'images/icons/infinity-solid.svg' %}" width="45px" height="45px" viewBox="0 0 16 16">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+              </svg>
+            </div>
+            <div>
+              <h2>Mathametics</h2>
+              <p>Mathematics is the foundation of all sciences and engineering. It includes algebra, calculus, geometry, and statistics. Mathematical models help solve real-world problems in finance, computing, and physics. </p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="b-example-divider"></div>
+    
+      
+      <div class="container px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Dream big, work hard, stay focused</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <img src="{% static 'images/icons/gears-solid.svg' %}" width="45px" height="45px" viewBox="0 0 16 16">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+              </svg>
+            </div>
+            <div>
+              <h2>Mechanical Engineering</h2>
+              <p>Mechanical Engineering deals with machines, thermodynamics, and manufacturing. It includes robotics, automotive, and aerospace engineering. Engineers design energy-efficient systems and sustainable materials.</p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <img src="{% static 'images/icons/microscope-solid.svg' %}" width="45px" height="45px" viewBox="0 0 16 16">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+              </svg>
+            </div>
+            <div>
+              <h2>Medical Electronics</h2>
+              <p>Medical Electronics focuses on developing healthcare technologies. It includes medical imaging, biosensors, and wearable health devices. Engineers work on devices like ECG, MRI, and pacemakers. Biomedical signal processing helps diagnose diseases accurately.</p>
+              <a href="{% url 'view' %}" class="btn btn-primary">
+                Click Me
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="row">
+              <div class="col-sm-11">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Thank you for visiting</h5>
+                    <p class="card-text">Never Stop Learning. Have a nice day</p>
+                    <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    
+    </main>
+    
+    
+      <script src="https://kit.fontawesome.com/0e19331d05.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
