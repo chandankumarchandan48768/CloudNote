@@ -14,18 +14,6 @@ CloudNote is a Django-based web app that helps students upload, organize, and re
 
 ---
 
-## 🖼️ Screenshots
-
-### 📌 Home Page
-![Home Page](screenshots/homepage.png)
-
-### 📤 Upload Page
-![Upload Page](screenshots/upload.png)
-
-### 📁 Notes Listing
-![Notes List](screenshots/notes-list.png)
-
----
 
 ## ⚙️ Tech Stack
 
